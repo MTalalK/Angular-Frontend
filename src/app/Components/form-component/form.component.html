@@ -1,0 +1,111 @@
+
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h1>Developer Information</h1>
+    <div class="field">
+      <span class="field-label">Developer: </span>
+      <mat-form-field>
+        <input type="text" matInput formControlName="name" placeholder="Enter Developer Name*">
+        <mat-error *ngIf="form.get('developer')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">Projects: </span>
+      <mat-form-field>
+        <input type="text" matInput formControlName="projects" placeholder="Enter Project Name*">
+        <mat-error *ngIf="form.get('projects')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">Unit: </span>
+      <mat-form-field>
+        <input type="text" matInput formControlName="unit" placeholder="Enter Unit Name*">
+        <mat-error *ngIf="form.get('unit')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">Unit Type: </span>
+      <mat-form-field>
+        <input type="text" matInput formControlName="unitType" placeholder="Enter Unit Type*">
+        <mat-error *ngIf="form.get('unitType')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">Level: </span>
+      <mat-form-field>
+        <input type="text" matInput formControlName="level" placeholder="Enter Level*">
+        <mat-error *ngIf="form.get('level')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">Location: </span>
+      <mat-form-field>
+        <textarea type="text" matInput formControlName="location" placeholder="Enter Location*"></textarea>
+        <mat-error *ngIf="form.get('location')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">Exposure: </span>
+      <mat-form-field>
+        <mat-select formControlName="exposure" placeholder="Select Exposure">
+          <mat-option value="Low">Low</mat-option>
+          <mat-option value="Medium">Medium</mat-option>
+          <mat-option value="High">High</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('exposure')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">Size: </span>
+      <mat-form-field>
+        <input type="number" matInput formControlName="size" placeholder="Enter Size (Sq Ft)*">
+        <mat-error *ngIf="form.get('size')?.invalid">
+          This is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="field">
+      <span class="field-label">BedRoom: </span>
+      <button type="button" mat-flat-button (click)="decrement('bedRoom')">-</button>
+      <mat-form-field class="counter">
+        <input type="number" matInput formControlName="bedRoom">
+      </mat-form-field>
+      <button type="button" mat-flat-button (click)="increment('bedRoom')">+</button>
+    </div>
+    <div class="field">
+      <span class="field-label">BathRoom: </span>
+      <button type="button" mat-flat-button (click)="decrement('bathRoom')">-</button>
+      <mat-form-field class="counter">
+        <input type="number" matInput formControlName="bathRoom">
+      </mat-form-field>
+      <button type="button" mat-flat-button (click)="increment('bathRoom')">+</button>
+    </div>
+    <div class="field">
+      <span class="field-label">Parking: </span>
+      <mat-checkbox formControlName="parking"></mat-checkbox>
+    </div>
+    <div class="field">
+      <span class="field-label">Locker: </span>
+      <mat-checkbox formControlName="locker"></mat-checkbox>
+    </div>
+    <div class="field">
+      <span class="field-label">Balcony: </span>
+      <mat-checkbox formControlName="balcony"></mat-checkbox>
+    </div>
+      <!-- Add a button to submit the form -->
+      <button type="submit" class="submitbtn" mat-flat-button color="primary">Next</button>
+  </form>
+  

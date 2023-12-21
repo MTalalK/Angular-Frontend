@@ -1,0 +1,25 @@
+.form{
+    margin-top: 10%;
+    margin-left: 10%;
+    .submitbtn{
+        margin-left:50%;
+    }
+}
+
+.field{
+    display: block;
+    width: 80%;
+    .field-label{
+        display:inline-block;
+        width: 100px;
+    }
+    mat-form-field{
+        width: 600px
+    }
+    .counter{
+        width:80px;
+        input{
+            color: #555;
+        }
+    }
+}
